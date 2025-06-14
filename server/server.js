@@ -18,7 +18,8 @@ await connectDB();
 await connectCloudinary();
 
 const allowedOrigins = [
-  "http://localhost:5173, 'https://healthmix-frontend.vercel.app",
+  "http://localhost:5173",
+  "https://healthmix-frontend.vercel.app",
 ];
 
 app.post("/stripe", express.raw({ type: "application/json" }), stripeWebhooks);
